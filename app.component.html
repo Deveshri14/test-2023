@@ -1,0 +1,23 @@
+<div class="navbar navbar-dark bg-primary shadow-sm">
+    <i style="font-size: 48px" class="fas fa-bars">
+    <strong>shrine</strong>
+</i>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card-grid" *ngFor="let data of items">
+                <div class="card" style="width: 18rem;  display: grid;">
+                    <!-- <img class="card-img-top" alt="Card image cap">{{data.url}} -->
+                    <img class="card-img-top" [src]="data.url" alt="image here" />{{data.thumbnailUrl}}
+                    <div class="card-body">
+                        <h5 class="card-title">{{data.title}}</h5>
+                        <p class="card-text">
+                            {{data.id}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-atm></app-atm>
